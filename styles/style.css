@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color:  #ffab6b;
+  --main-font: 'Raleway', sans-serif;
+  --accent-font: 'STIX Two Text', serif;
+}
+
 *,
 *::before,
 *::after {
@@ -22,14 +30,6 @@ ol,
 li,
 figure {
   margin: 0;
-}
-
-:root {
-  --bg-color: #f3efec;
-  --text-color: #312a4e;
-  --accent-color:  #ffab6b;
-  --main-font: 'Raleway', sans-serif;
-  --accent-font: 'STIX Two Text', serif;
 }
 
 .theme_dark {
@@ -105,7 +105,7 @@ figure {
   border-block-end: 6px solid var(--accent-color, #ffab6b);
   position: absolute;
   inset-block-end: 0;
-  inset-inline-end: 2px;
+  inset-inline-end: -4px;
   inline-size: 81px;
   z-index: -1;
 }
@@ -162,10 +162,10 @@ figure {
 }
 
 .content__card {
+  display: flex;
   aspect-ratio: 4 / 3;
   margin-block-start: 7%;
   border: 1px solid var(--text-color, #312a4e);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -180,7 +180,7 @@ figure {
 }
 
 .colored-text::after {
-  content: "";
+  content: '';
   position: absolute;
   inset-block-end: 9px;
   inset-inline-end: -5px;
@@ -239,7 +239,8 @@ figure {
 .content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
   background-color: var(--accent-color, #ffab6b);
   padding: 0 4px;
-  margin-right: 1px;
+  margin-left: -5px;
+  margin-right: 4px;
   font-size: 30px;
   font-weight: 700;
 }
@@ -254,8 +255,8 @@ figure {
 
 .content__figure {
   position: relative;
-  width: calc(100% + 10vi);
-  margin: 7% auto;
+  width: calc(100% + 5vi + 5vi);
+  margin-block: 7%;
   inset-inline-end: 5vi;
 }
 
